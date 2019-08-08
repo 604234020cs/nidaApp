@@ -15,11 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PhoneBookDetailPage {
 
+  contact = {name: '', telephone: '', imageUrl: ''};
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PhoneBookDetailPage');
+    this.contact = this.navParams.data;
+    console.log(this.contact);
   }
 
 }
